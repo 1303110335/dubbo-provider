@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+
+dubbo:
+  application:
+    name: dubbo-provider
+  registry:
+    address: 127.0.0.1:2181
+    protocol: zookeeper
+  protocol:
+    name: dubbo
+    port: 20880
+  provider:
+    version: 1.0
+logging:
+  pattern:
+    console: "%d - %msg%n"
+#  path: /Users/xuleyan/Desktop/dubbos/dubbo-provider/src/main/runtime/
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    database: 0
