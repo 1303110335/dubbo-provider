@@ -2,10 +2,10 @@
  * fshows.com
  * Copyright (C) 2013-2020 All Rights Reserved.
  */
-package com.xuleyan.provider.facade.impl;
+package com.xuleyan.provider.service.facade.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.xuleyan.provider.facade.UserDubboFacade;
+import org.apache.dubbo.config.annotation.Service;
 import org.slf4j.MDC;
 import org.springframework.stereotype.Component;
 

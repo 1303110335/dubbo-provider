@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8082
 
 
 dubbo:
@@ -13,9 +13,11 @@ dubbo:
     port: 20880
   provider:
     version: 1.0
-logging:
-  pattern:
-    console: "%d - %msg%n"
+    group: goods_group
+    filter: dubboTracerFilter
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
 #  path: /Users/xuleyan/Desktop/dubbos/dubbo-provider/src/main/runtime/
 spring:
   redis:
@@ -23,3 +25,30 @@ spring:
     port: 6379
     password: 123456
     database: 0
+#  data:
+#    elasticsearch:
+#      cluster-name: xly-es
+#      cluster-nodes: localhost:9200
+
+elasticsearch:
+  nodes: 127.0.0.1:9200
+  schema: http
+  max-connect-total: 50
+  max-connect-per-route: 10
+  connection-request-timeout-millis: 500
+  socket-timeout-millis: 30000
+  connect-timeout-millis: 1000
+
+es.cluster.address: 192.168.2.102:9200
+es.user.name:
+es.password:
+
+# 加载日志文件
+logging:
+  config: log4j2.xml
+
+com:
+  xuleyan:
+    tracer:
+      global-log-out: true
+      rpc-log-out: true

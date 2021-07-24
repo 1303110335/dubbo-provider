@@ -1,4 +1,4 @@
-package com.xuleyan.provider.facade.impl;
+package com.xuleyan.provider.service.facade.impl;
 
 import com.xuleyan.frame.extend.lock.DistributedLock;
 import com.xuleyan.frame.extend.lock.ZookeeperDistributedLock;

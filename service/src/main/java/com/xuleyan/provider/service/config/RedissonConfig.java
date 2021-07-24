@@ -2,7 +2,7 @@
  * fshows.com
  * Copyright (C) 2013-2020 All Rights Reserved.
  */
-package com.xuleyan.provider.config;
+package com.xuleyan.provider.service.config;
 
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
@@ -17,18 +17,18 @@ import org.springframework.context.annotation.Configuration;
  * @version RedissonConfig.java, v 0.1 2020-06-03 12:52 PM xuleyan
  */
 
-@Configuration
+//@Configuration
 public class RedissonConfig {
 
     @Autowired
     private RedisProperties redisProperties;
 
-    @Bean
-    public RedissonClient redissonClient() {
-        Config config = new Config();
-        String redisUrl = String.format("redis://%s:%s", redisProperties.getHost() + "", redisProperties.getPort() + "");
-        config.useSingleServer().setAddress(redisUrl).setPassword(redisProperties.getPassword());
-        config.useSingleServer().setDatabase(3);
-        return Redisson.create(config);
-    }
+//    @Bean
+//    public RedissonClient redissonClient() {
+//        Config config = new Config();
+//        String redisUrl = String.format("redis://%s:%s", redisProperties.getHost() + "", redisProperties.getPort() + "");
+//        config.useSingleServer().setAddress(redisUrl).setPassword(redisProperties.getPassword());
+//        config.useSingleServer().setDatabase(3);
+//        return Redisson.create(config);
+//    }
 }
