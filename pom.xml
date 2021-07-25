@@ -20,8 +20,8 @@
         <dubbo.springboot.version>0.2.0</dubbo.springboot.version>
         <dubbo.version>2.6.2</dubbo.version>
         <spring.version>5.1.14.RELEASE</spring.version>
-        <junit.version>4.12</junit.version>
-        <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
+        <junit.version>4.13.1</junit.version>
+        <hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
         <redission.version>3.8.2</redission.version>
         <apache.curator.version>2.12.0</apache.curator.version>
         <lombok.version>1.18.12</lombok.version>
