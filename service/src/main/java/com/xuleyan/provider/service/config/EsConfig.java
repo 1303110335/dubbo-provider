@@ -21,7 +21,7 @@ import java.io.IOException;
  */
 
 
-@Configuration
+//@Configuration
 public class EsConfig {
 
 

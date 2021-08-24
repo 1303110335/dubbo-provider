@@ -3,6 +3,9 @@ server:
 
 
 dubbo:
+  monitor:
+    protocol: registry
+    address: 127.0.0.1:7070
   application:
     name: dubbo-provider
   registry:
@@ -10,11 +13,24 @@ dubbo:
     protocol: zookeeper
   protocol:
     name: dubbo
-    port: 20880
+    port: -1
+    threads: 10
+    dispatcher: all
+    threadpool: fixed
+#    threadpool: eager
+    accepts: 0
+    iothreads: 5
+#    queues: 5
+#    corethreads: 5
+
   provider:
     version: 1.0
     group: goods_group
     filter: dubboTracerFilter
+    timeout: 3000
+#    scope: service
+
+
 #logging:
 #  pattern:
 #    console: "%d - %msg%n"
@@ -25,6 +41,8 @@ spring:
     port: 6379
     password: 123456
     database: 0
+  aop:
+    proxy-target-class: true
 #  data:
 #    elasticsearch:
 #      cluster-name: xly-es

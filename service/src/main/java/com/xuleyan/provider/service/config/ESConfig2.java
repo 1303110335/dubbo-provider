@@ -20,7 +20,7 @@ import java.util.List;
  * @author xuleyan
  * @version ESConfig.java, v 0.1 2020-07-07 8:01 下午
  */
-@Configuration
+//@Configuration
 public class ESConfig2 {
 
     @Value("${elasticsearch.nodes}")
